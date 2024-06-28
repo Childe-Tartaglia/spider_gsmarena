@@ -1,0 +1,992 @@
+2022-05-26 12:01:27 [scrapy.utils.log] INFO: Scrapy 2.6.1 started (bot: spider_gsmarena)
+2022-05-26 12:01:27 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.2.0, Python 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1n  15 Mar 2022), cryptography 36.0.2, Platform macOS-12.3.1-x86_64-i386-64bit
+2022-05-26 12:01:27 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'spider_gsmarena',
+ 'CONCURRENT_REQUESTS': 6,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 16,
+ 'CONCURRENT_REQUESTS_PER_IP': 6,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 6,
+ 'LOG_FILE': 'logdemo.log',
+ 'NEWSPIDER_MODULE': 'spider_gsmarena.spiders',
+ 'SPIDER_MODULES': ['spider_gsmarena.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, '
+               'like Gecko) Chrome/19.0.1055.1 Safari/535.24'}
+2022-05-26 12:01:27 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-26 12:01:27 [scrapy.extensions.telnet] INFO: Telnet Password: 79fd4a951b500cc4
+2022-05-26 12:01:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2022-05-26 12:01:27 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-26 12:01:27 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-26 12:01:27 [scrapy.middleware] INFO: Enabled item pipelines:
+['spider_gsmarena.pipelines.MysqlPipeline']
+2022-05-26 12:01:27 [scrapy.core.engine] INFO: Spider opened
+2022-05-26 12:01:27 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:01:27 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-26 12:01:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/makers.php3> (referer: https://googleads.g.doubleclick.net/)
+2022-05-26 12:01:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gionee-phones-92.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:01:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gigabyte-phones-47.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:01:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/garmin_asus-phones-65.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:01:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/fujitsu_siemens-phones-50.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:02:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/fairphone-phones-127.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:02:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/eten-phones-40.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:02:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte-phones-62.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:02:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gionee-phones-f-92-0-p3.php> (referer: https://www.gsmarena.com/gionee-phones-92.php)
+2022-05-26 12:02:27 [scrapy.extensions.logstats] INFO: Crawled 9 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:02:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gigabyte-phones-f-47-0-p2.php> (referer: https://www.gsmarena.com/gigabyte-phones-47.php)
+2022-05-26 12:02:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/garmin_asus_nuvifone_m20-2724.php> (referer: https://www.gsmarena.com/garmin_asus-phones-65.php)
+2022-05-26 12:02:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/garmin_asus_nuvifone_m20-2724.php> (referer: https://www.gsmarena.com/garmin_asus-phones-65.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:02:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/fujitsu_siemens_t810-1953.php> (referer: https://www.gsmarena.com/fujitsu_siemens-phones-50.php)
+2022-05-26 12:02:43 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/fujitsu_siemens_t810-1953.php> (referer: https://www.gsmarena.com/fujitsu_siemens-phones-50.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:02:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/fairphone_3-10397.php> (referer: https://www.gsmarena.com/fairphone-phones-127.php)
+2022-05-26 12:02:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/fairphone_3-10397.php> (referer: https://www.gsmarena.com/fairphone-phones-127.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:02:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/eten-phones-f-40-0-p2.php> (referer: https://www.gsmarena.com/eten-phones-40.php)
+2022-05-26 12:03:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte-phones-f-62-0-p8.php> (referer: https://www.gsmarena.com/zte-phones-62.php)
+2022-05-26 12:03:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gionee_dream_d1-6097.php> (referer: https://www.gsmarena.com/gionee-phones-f-92-0-p3.php)
+2022-05-26 12:03:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/gionee_dream_d1-6097.php> (referer: https://www.gsmarena.com/gionee-phones-f-92-0-p3.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:03:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gigabyte_g_x5-1747.php> (referer: https://www.gsmarena.com/gigabyte-phones-f-47-0-p2.php)
+2022-05-26 12:03:23 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/gigabyte_g_x5-1747.php> (referer: https://www.gsmarena.com/gigabyte-phones-f-47-0-p2.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:03:27 [scrapy.extensions.logstats] INFO: Crawled 17 pages (at 8 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:03:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gigabyte_doraemon-1748.php> (referer: https://www.gsmarena.com/gigabyte-phones-f-47-0-p2.php)
+2022-05-26 12:03:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/gigabyte_doraemon-1748.php> (referer: https://www.gsmarena.com/gigabyte-phones-f-47-0-p2.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:03:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gigabyte_keroro-1754.php> (referer: https://www.gsmarena.com/gigabyte-phones-f-47-0-p2.php)
+2022-05-26 12:03:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/gigabyte_keroro-1754.php> (referer: https://www.gsmarena.com/gigabyte-phones-f-47-0-p2.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:03:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gigabyte_snoopy-1749.php> (referer: https://www.gsmarena.com/gigabyte-phones-f-47-0-p2.php)
+2022-05-26 12:03:37 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/gigabyte_snoopy-1749.php> (referer: https://www.gsmarena.com/gigabyte-phones-f-47-0-p2.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:03:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/eten_p300-1225.php> (referer: https://www.gsmarena.com/eten-phones-f-40-0-p2.php)
+2022-05-26 12:03:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/eten_p300-1225.php> (referer: https://www.gsmarena.com/eten-phones-f-40-0-p2.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:03:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_v20-9913.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:03:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_v20-9913.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:03:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_coral200_sollar-3213.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:03:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_coral200_sollar-3213.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:04:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f100-3100.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:04:07 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f100-3100.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:04:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f101-3101.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:04:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f101-3101.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:04:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f103-3099.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:04:22 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f103-3099.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:04:27 [scrapy.extensions.logstats] INFO: Crawled 26 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:04:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f600-3102.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:04:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f600-3102.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:04:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f870-3103.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:04:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f870-3103.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:04:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f928-3104.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:04:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f928-3104.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:04:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f952-3105.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:04:46 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f952-3105.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:04:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f912-3111.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:04:54 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f912-3111.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:05:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f233-3110.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:05:01 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f233-3110.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:05:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_a261-3214.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:05:10 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_a261-3214.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:05:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_s302-3222.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:05:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_s302-3222.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:05:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_xiang-3112.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:05:27 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_xiang-3112.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:05:27 [scrapy.extensions.logstats] INFO: Crawled 35 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:05:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_raise-3113.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:05:35 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_raise-3113.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:05:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_e811-3114.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:05:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_e811-3114.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:05:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_x760-3120.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:05:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_x760-3120.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:05:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_bingo-3197.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:05:55 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_bingo-3197.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:06:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_x990-3244.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:06:04 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_x990-3244.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:06:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f951-3489.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:06:08 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f951-3489.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:06:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_racer-3423.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:06:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_racer-3423.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:06:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_e_n72-3485.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:06:22 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_e_n72-3485.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:06:27 [scrapy.extensions.logstats] INFO: Crawled 43 pages (at 8 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:06:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_f107-3727.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:06:31 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_f107-3727.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:06:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_salute_f350-3491.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:06:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_salute_f350-3491.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:06:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_s213-3600.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:06:44 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_s213-3600.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:06:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_r220-4077.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:06:49 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_r220-4077.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:06:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_r221-3604.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:06:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_r221-3604.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:07:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_r228-4342.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:07:06 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_r228-4342.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:07:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_r228_dual_sim-4341.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:07:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_r228_dual_sim-4341.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:07:20 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2022-05-26 12:07:20 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2022-05-26 12:07:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_r230-4078.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:07:23 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_r230-4078.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:07:25 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2022-05-26 12:10:22 [scrapy.utils.log] INFO: Scrapy 2.6.1 started (bot: spider_gsmarena)
+2022-05-26 12:10:22 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.2.0, Python 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1n  15 Mar 2022), cryptography 36.0.2, Platform macOS-12.3.1-x86_64-i386-64bit
+2022-05-26 12:10:22 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'spider_gsmarena',
+ 'CONCURRENT_REQUESTS': 6,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 16,
+ 'CONCURRENT_REQUESTS_PER_IP': 6,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 6,
+ 'LOG_FILE': 'logdemo.log',
+ 'NEWSPIDER_MODULE': 'spider_gsmarena.spiders',
+ 'SPIDER_MODULES': ['spider_gsmarena.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like '
+               'Gecko) Chrome/19.0.1061.1 Safari/536.3'}
+2022-05-26 12:10:22 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-26 12:10:22 [scrapy.extensions.telnet] INFO: Telnet Password: 738dfa30e310bdcd
+2022-05-26 12:10:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2022-05-26 12:10:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-26 12:10:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-26 12:10:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['spider_gsmarena.pipelines.MysqlPipeline']
+2022-05-26 12:10:22 [scrapy.core.engine] INFO: Spider opened
+2022-05-26 12:10:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:10:22 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-26 12:10:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/makers.php3> (referer: https://googleads.g.doubleclick.net/)
+2022-05-26 12:10:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/casio-phones-77.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:10:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/bq-phones-108.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:10:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/bosch-phones-10.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:10:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/blu-phones-67.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:10:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/blackview-phones-116.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:11:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/blackberry-phones-36.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:11:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte-phones-62.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:11:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/casio_g_zone_brigade-4558.php> (referer: https://www.gsmarena.com/casio-phones-77.php)
+2022-05-26 12:11:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/casio_g_zone_brigade-4558.php> (referer: https://www.gsmarena.com/casio-phones-77.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:11:22 [scrapy.extensions.logstats] INFO: Crawled 9 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:11:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/bq__aquaris_m10-7842.php> (referer: https://www.gsmarena.com/bq-phones-108.php)
+2022-05-26 12:11:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/bq__aquaris_m10-7842.php> (referer: https://www.gsmarena.com/bq-phones-108.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:11:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/bosch_com_207-134.php> (referer: https://www.gsmarena.com/bosch-phones-10.php)
+2022-05-26 12:11:32 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/bosch_com_207-134.php> (referer: https://www.gsmarena.com/bosch-phones-10.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:11:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/blu-phones-f-67-0-p9.php> (referer: https://www.gsmarena.com/blu-phones-67.php)
+2022-05-26 12:11:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/blackview_a7-9045.php> (referer: https://www.gsmarena.com/blackview-phones-116.php)
+2022-05-26 12:11:48 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/blackview_a7-9045.php> (referer: https://www.gsmarena.com/blackview-phones-116.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:11:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/blackberry-phones-f-36-0-p3.php> (referer: https://www.gsmarena.com/blackberry-phones-36.php)
+2022-05-26 12:12:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte-phones-f-62-0-p8.php> (referer: https://www.gsmarena.com/zte-phones-62.php)
+2022-05-26 12:12:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte-phones-f-62-0-p7.php> (referer: https://www.gsmarena.com/zte-phones-62.php)
+2022-05-26 12:12:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte-phones-f-62-0-p6.php> (referer: https://www.gsmarena.com/zte-phones-62.php)
+2022-05-26 12:12:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte-phones-f-62-0-p5.php> (referer: https://www.gsmarena.com/zte-phones-62.php)
+2022-05-26 12:12:22 [scrapy.extensions.logstats] INFO: Crawled 18 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:12:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/blu_dual_sim_lite-3575.php> (referer: https://www.gsmarena.com/blu-phones-f-67-0-p9.php)
+2022-05-26 12:12:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/blu_dual_sim_lite-3575.php> (referer: https://www.gsmarena.com/blu-phones-f-67-0-p9.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:12:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/blu_gol-3574.php> (referer: https://www.gsmarena.com/blu-phones-f-67-0-p9.php)
+2022-05-26 12:12:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/blu_gol-3574.php> (referer: https://www.gsmarena.com/blu-phones-f-67-0-p9.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:12:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/blackberry_curve_touch_cdma-3757.php> (referer: https://www.gsmarena.com/blackberry-phones-f-36-0-p3.php)
+2022-05-26 12:12:43 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/blackberry_curve_touch_cdma-3757.php> (referer: https://www.gsmarena.com/blackberry-phones-f-36-0-p3.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:12:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_v20-9913.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+2022-05-26 12:12:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_v20-9913.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p8.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:12:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_sage-3737.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p7.php)
+2022-05-26 12:12:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_sage-3737.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p7.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:13:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_v96-4593.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+2022-05-26 12:13:04 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_v96-4593.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:13:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_nubia_z5s_mini_nx403a-5853.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:13:11 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_nubia_z5s_mini_nx403a-5853.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:13:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_nubia_z5s-5852.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:13:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_nubia_z5s-5852.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:13:22 [scrapy.extensions.logstats] INFO: Crawled 26 pages (at 8 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:13:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_s_ii_s291-5948.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:13:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_s_ii_s291-5948.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:13:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_sonata_4g-5963.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:13:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_sonata_4g-5963.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:13:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_iconic_phablet-5962.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:13:37 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_iconic_phablet-5962.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:13:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_open_ii-6156.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:13:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_open_ii-6156.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:13:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_open_c-6155.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:13:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_open_c-6155.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:13:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_memo_ii_lte-6154.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:13:57 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_memo_ii_lte-6154.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:14:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_nubia_x6-6236.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:14:02 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_nubia_x6-6236.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:14:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_star_1-6324.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:14:10 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_star_1-6324.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:14:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_redbull_v5_v9180-6679.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:14:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_redbull_v5_v9180-6679.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:14:22 [scrapy.extensions.logstats] INFO: Crawled 35 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:14:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_g2-6381.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:14:26 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_g2-6381.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:14:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_kis_3-6579.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:14:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_kis_3-6579.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:14:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_l2-6367.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:14:41 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_l2-6367.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:14:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_nubia_z7_mini-6492.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:14:46 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_nubia_z7_mini-6492.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:14:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_nubia_z7_max-6491.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:14:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_nubia_z7_max-6491.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_nubia_z7-6490.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:00 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_nubia_z7-6490.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_nubia_z5s_mini_nx405h-6607.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:06 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_nubia_z5s_mini_nx405h-6607.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_kis_3_max-6641.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_kis_3_max-6641.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_vec_3g-6644.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:19 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_vec_3g-6644.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:22 [scrapy.extensions.logstats] INFO: Crawled 44 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:15:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_vec_4g-6645.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_vec_4g-6645.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_zmax-6697.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_zmax-6697.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_xmax-6718.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:39 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_xmax-6718.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_zinger-7156.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:45 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_zinger-7156.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_s_pro-7155.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_s_pro-7155.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:15:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_s_ii-6847.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:15:59 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_s_ii-6847.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:16:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_speed-6898.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:16:06 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_speed-6898.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:16:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_x_plus_z826-6904.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:16:12 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_x_plus_z826-6904.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:16:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_star_2-6914.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:16:20 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_star_2-6914.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:16:22 [scrapy.extensions.logstats] INFO: Crawled 53 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:16:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_x_max+-6915.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:16:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_x_max+-6915.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:16:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_imperial_ii-7157.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:16:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_imperial_ii-7157.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:16:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_s6-6954.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:16:41 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_s6-6954.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:16:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_v5_lux-7056.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:16:49 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_v5_lux-7056.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:16:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_g-7058.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:16:57 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_g-7058.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:17:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_g_lux-7057.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:17:03 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_g_lux-7057.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:17:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_l3-7105.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:17:12 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_l3-7105.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:17:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_blade_l3_plus-7891.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:17:20 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_blade_l3_plus-7891.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:17:22 [scrapy.extensions.logstats] INFO: Crawled 61 pages (at 8 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:17:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_s3-7078.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:17:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_s3-7078.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:17:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_open_l-7106.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:17:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_open_l-7106.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:17:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_nubia_z9_mini-7149.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+2022-05-26 12:17:44 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_nubia_z9_mini-7149.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p5.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:17:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_light_tab_300-4595.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+2022-05-26 12:17:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_light_tab_300-4595.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:18:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_score_m-4650.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+2022-05-26 12:18:00 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_score_m-4650.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:18:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_u880e-4776.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+2022-05-26 12:18:08 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_u880e-4776.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:18:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_x_v970-4597.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+2022-05-26 12:18:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_x_v970-4597.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:18:22 [scrapy.extensions.logstats] INFO: Crawled 68 pages (at 7 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:18:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/zte_grand_x_lte_t82-4873.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+2022-05-26 12:18:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.gsmarena.com/zte_grand_x_lte_t82-4873.php> (referer: https://www.gsmarena.com/zte-phones-f-62-0-p6.php)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/charlotte/spider/phone models/spider_gsmarena/spider_gsmarena/spiders/gsmarena.py", line 157, in parse_specification
+    price = response.xpath('//a[@href="apple_iphone_12-price-10509.php"]/text()').getall()[1]
+IndexError: list index out of range
+2022-05-26 12:18:25 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2022-05-26 12:18:25 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2022-05-26 12:18:25 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2022-05-26 12:18:48 [scrapy.utils.log] INFO: Scrapy 2.6.1 started (bot: spider_gsmarena)
+2022-05-26 12:18:48 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.2.0, Python 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1n  15 Mar 2022), cryptography 36.0.2, Platform macOS-12.3.1-x86_64-i386-64bit
+2022-05-26 12:18:48 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'spider_gsmarena',
+ 'CONCURRENT_REQUESTS': 6,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 16,
+ 'CONCURRENT_REQUESTS_PER_IP': 6,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 6,
+ 'LOG_FILE': 'logdemo.log',
+ 'NEWSPIDER_MODULE': 'spider_gsmarena.spiders',
+ 'SPIDER_MODULES': ['spider_gsmarena.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 '
+               '(KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11'}
+2022-05-26 12:18:48 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-26 12:18:48 [scrapy.extensions.telnet] INFO: Telnet Password: 9e0e9dd5153e33c5
+2022-05-26 12:18:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2022-05-26 12:18:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-26 12:18:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-26 12:18:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['spider_gsmarena.pipelines.MysqlPipeline']
+2022-05-26 12:18:48 [scrapy.core.engine] INFO: Spider opened
+2022-05-26 12:18:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:18:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-26 12:18:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/makers.php3> (referer: https://googleads.g.doubleclick.net/)
+2022-05-26 12:18:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gionee-phones-92.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:18:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gigabyte-phones-47.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:19:03 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2022-05-26 12:19:03 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2022-05-26 12:19:03 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2022-05-26 12:19:58 [scrapy.utils.log] INFO: Scrapy 2.6.1 started (bot: spider_gsmarena)
+2022-05-26 12:19:58 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.2.0, Python 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1n  15 Mar 2022), cryptography 36.0.2, Platform macOS-12.3.1-x86_64-i386-64bit
+2022-05-26 12:19:58 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'spider_gsmarena',
+ 'CONCURRENT_REQUESTS': 6,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 16,
+ 'CONCURRENT_REQUESTS_PER_IP': 6,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 6,
+ 'LOG_FILE': 'logdemo.log',
+ 'NEWSPIDER_MODULE': 'spider_gsmarena.spiders',
+ 'SPIDER_MODULES': ['spider_gsmarena.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like '
+               'Gecko) Chrome/19.0.1061.1 Safari/536.3'}
+2022-05-26 12:19:58 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-05-26 12:19:58 [scrapy.extensions.telnet] INFO: Telnet Password: fb20f38209c1f830
+2022-05-26 12:19:58 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2022-05-26 12:19:58 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-05-26 12:19:58 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-05-26 12:19:58 [scrapy.middleware] INFO: Enabled item pipelines:
+['spider_gsmarena.pipelines.MysqlPipeline']
+2022-05-26 12:19:58 [scrapy.core.engine] INFO: Spider opened
+2022-05-26 12:19:58 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-05-26 12:19:58 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-05-26 12:19:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/makers.php3> (referer: https://googleads.g.doubleclick.net/)
+2022-05-26 12:19:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/haier-phones-33.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:20:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/google-phones-107.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:20:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.gsmarena.com/gionee-phones-92.php> (referer: https://www.gsmarena.com/makers.php3)
+2022-05-26 12:20:25 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2022-05-26 12:20:25 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2022-05-26 12:20:25 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2022-05-26 12:20:25 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://www.gsmarena.com/gigabyte-phones-47.php. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2022-05-26 12:20:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.gsmarena.com/gigabyte-phones-47.php> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: Chunked decoder in 'CHUNK_LENGTH' state, still expecting more data to get to 'FINISHED' state.>]
